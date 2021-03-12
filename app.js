@@ -106,3 +106,24 @@ function validateForm() {
     }
     return true;
 }
+
+const burgero = document.querySelector('.burger-open');
+const burgerc = document.querySelector('.burger-close');
+const burger = document.querySelector('.burger');
+const navlinks = document.querySelector('.nav-links');
+const social = document.querySelector('.nav-social');
+const logo = document.querySelector('.logo');
+burger.addEventListener('click', () => {
+    navlinks.classList.toggle("nav-active");
+    logo.classList.toggle("nav-logo");
+    if (burgero.style.display == "none") {
+        burgero.style.display = "block";
+        burgerc.style.display = "none";
+        social.style.display = "none";
+    }
+    else {
+        burgero.style.display = "none";
+        burgerc.style.display = "block";
+        social.style.display = "flex";
+    }
+})
